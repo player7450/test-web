@@ -1,0 +1,13 @@
+# folder
+target/
+
+# fixed file
+*.o
+
+# temp file
+~*
+*.log
+*.tmp
+
+# script
+*.bat
