@@ -1,8 +1,10 @@
 # folder
 target/
+.idea/
 
 # fixed file
 *.o
+*.iml
 
 # temp file
 ~*
