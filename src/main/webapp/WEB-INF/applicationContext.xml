@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="HelloWorldServiceImpl" class = "lz.test.service.impl.HelloWorldServiceImpl" />
-    <bean id="HelloWorldService" class = "com.taobao.hsf.app.spring.util.HSFSpringProviderBean" init-method="init">
-        <property name="serviceInterface">
-            <value>lz.test.service.HelloWorldService</value>
-        </property>
-        <property name="target">
-            <ref bean = "HelloWorldServiceImpl"/>
-        </property>
-        <property name="serviceVersion">
-            <value>1.0.0.local</value>
-        </property>
-        <property name="serviceGroup">
-            <value>HSF</value>
-        </property>
-        <property name="serviceName">
-            <value>HelloWorld</value>
-        </property>
-    </bean>
-    <bean id="HelloWorldConsumer" class = "com.taobao.hsf.app.spring.util.HSFSpringConsumerBean" init-method="init">
-        <property name="interfaceName">
-            <value>lz.test.service.HelloWorldService</value>
-        </property>
-        <property name="version">
-            <value>1.0.0.local</value>
-        </property>
-    </bean>
 </beans>
