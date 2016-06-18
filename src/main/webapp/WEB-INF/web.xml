@@ -4,14 +4,17 @@
 
 <web-app>
   <display-name>test-web</display-name>
+
   <servlet>
     <servlet-name>hello</servlet-name>
     <servlet-class>lz.test.servlet.HelloServlet</servlet-class>
   </servlet>
+
   <servlet-mapping>
     <servlet-name>hello</servlet-name>
     <url-pattern>/hello</url-pattern>
   </servlet-mapping>
+
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>
