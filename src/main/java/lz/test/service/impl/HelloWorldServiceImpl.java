@@ -9,6 +9,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class HelloWorldServiceImpl implements IHelloWorldService {
     public String sayHello(String name) {
-        return "hi, " + name + "\n";
+        return "hi, " + name;
     }
 }
