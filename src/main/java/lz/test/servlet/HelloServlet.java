@@ -14,7 +14,7 @@ import java.io.PrintWriter;
  * Created by liuzheng on 16/4/19.
  */
 public class HelloServlet extends HttpServlet {
-    public static final Logger logger = LoggerFactory.getLogger(HelloServlet.class);
+    private static final Logger logger = LoggerFactory.getLogger(HelloServlet.class);
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
