@@ -18,11 +18,11 @@ import javax.annotation.Resource;
 public class HelloController {
     private static final Logger logger = LoggerFactory.getLogger(HelloController.class);
     @Resource
-    private HelloService helloWorldService;
+    private HelloService helloService;
 
     @RequestMapping(value = "/hello.do", method = RequestMethod.GET)
     public @ResponseBody String sayHello(@RequestParam String name) {
-        String hiMsg = helloWorldService.sayHello(name);
+        String hiMsg = helloService.sayHello(name);
         logger.info(hiMsg);
         return hiMsg;
     }
