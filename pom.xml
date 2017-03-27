@@ -20,6 +20,26 @@
     <logback.version>1.1.5</logback.version>
   </properties>
 
+  <profiles>
+    <profile>
+      <id>default</id>
+      <properties>
+        <props>test_dev</props>
+      </properties>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+    </profile>
+
+  </profiles>
+
+  <build>
+    <filters>
+      <filter>../${props}.properties</filter>
+    </filters>
+    <finalName>test-web</finalName>
+  </build>
+
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -47,7 +67,4 @@
     </dependency>
   </dependencies>
 
-  <build>
-    <finalName>test-web</finalName>
-  </build>
 </project>

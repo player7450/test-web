@@ -12,6 +12,16 @@
     <artifactId>test-web-webapp</artifactId>
     <packaging>war</packaging>
 
+    <build>
+        <finalName>test-web-webapp</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+
     <dependencies>
         <dependency>
             <groupId>javax.servlet</groupId>
