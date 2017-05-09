@@ -42,11 +42,18 @@
 
   <dependencyManagement>
     <dependencies>
+      <!-- spring version -->
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-webmvc</artifactId>
         <version>${springmvc.version}</version>
       </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>${springmvc.version}</version>
+      </dependency>
+      <!-- spring version end -->
       <dependency>
         <groupId>javax.servlet</groupId>
         <artifactId>servlet-api</artifactId>
@@ -66,10 +73,6 @@
   </dependencyManagement>
 
   <dependencies>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-webmvc</artifactId>
-    </dependency>
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
