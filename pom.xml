@@ -15,8 +15,7 @@
   </modules>
 
   <properties>
-    <springmvc.version>3.2.9.RELEASE</springmvc.version>
-    <servlet.version>2.5</servlet.version>
+    <springmvc.version>4.3.12.RELEASE</springmvc.version>
     <slf4j.version>1.7.16</slf4j.version>
     <logback.version>1.1.5</logback.version>
   </properties>
@@ -54,11 +53,6 @@
         <version>${springmvc.version}</version>
       </dependency>
       <!-- spring version end -->
-      <dependency>
-        <groupId>javax.servlet</groupId>
-        <artifactId>servlet-api</artifactId>
-        <version>${servlet.version}</version>
-      </dependency>
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-api</artifactId>
