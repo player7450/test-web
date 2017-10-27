@@ -1,5 +1,6 @@
 package lz.test.controller;
 
+import lz.test.bean.Person;
 import lz.test.service.HelloService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,13 +18,27 @@ import javax.annotation.Resource;
 @Controller
 public class HelloController {
     private static final Logger logger = LoggerFactory.getLogger(HelloController.class);
+
     @Resource
     private HelloService helloService;
 
     @RequestMapping(value = "/hello.do", method = RequestMethod.GET)
-    public @ResponseBody String sayHello(@RequestParam String name) {
+    @ResponseBody
+    public String sayHello(@RequestParam String name) {
         String hiMsg = helloService.sayHello(name);
         logger.info(hiMsg);
         return hiMsg;
     }
+
+    @RequestMapping(value = "/person", method = RequestMethod.GET)
+    @ResponseBody
+    public Person getPerson(@RequestParam String name) {
+        Person p = new Person();
+        p.setName(name);
+        p.setAge(16);
+
+        return p;
+    }
+
+
 }
