@@ -30,7 +30,7 @@ public class HelloController {
         return hiMsg;
     }
 
-    @RequestMapping(value = "/person", method = RequestMethod.GET)
+    @RequestMapping(value = "/who.do", method = RequestMethod.GET)
     @ResponseBody
     public Person getPerson(@RequestParam String name) {
         Person p = new Person();
