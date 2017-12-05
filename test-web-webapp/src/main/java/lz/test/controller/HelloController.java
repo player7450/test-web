@@ -33,12 +33,12 @@ public class HelloController {
     @RequestMapping(value = "/who.do", method = RequestMethod.GET)
     @ResponseBody
     public Person getPerson(@RequestParam String name) {
-        Person p = new Person();
-        p.setName(name);
-        p.setAge(16);
+        Person p = Person.builder()
+                .name(name)
+                .age(16)
+                .build();
 
         return p;
     }
-
 
 }
