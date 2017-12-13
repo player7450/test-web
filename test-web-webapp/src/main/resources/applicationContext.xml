@@ -6,5 +6,6 @@
 
     <import resource="classpath:spring/springmvc.xml"/>
     <import resource="spring-service.xml"/>
+    <import resource="spring-aop.xml"/>
 
 </beans>

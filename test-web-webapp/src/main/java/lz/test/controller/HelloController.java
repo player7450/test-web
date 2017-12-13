@@ -1,5 +1,6 @@
 package lz.test.controller;
 
+import lz.test.bean.AjaxResult;
 import lz.test.bean.Person;
 import lz.test.service.HelloService;
 import org.slf4j.Logger;
@@ -24,21 +25,25 @@ public class HelloController {
 
     @RequestMapping(value = "/hello.do", method = RequestMethod.GET)
     @ResponseBody
-    public String sayHello(@RequestParam String name) {
+    public AjaxResult sayHello(@RequestParam String name) {
         String hiMsg = helloService.sayHello(name);
-        logger.info(hiMsg);
-        return hiMsg;
+
+        return AjaxResult.success(hiMsg);
     }
 
     @RequestMapping(value = "/who.do", method = RequestMethod.GET)
     @ResponseBody
-    public Person getPerson(@RequestParam String name) {
-        Person p = Person.builder()
-                .name(name)
-                .age(16)
-                .build();
+    public AjaxResult getPerson(@RequestParam String name) {
+        Person p = helloService.who(name);
 
-        return p;
+        return AjaxResult.success(p);
     }
 
+    @RequestMapping(value = "/exception.do", method = RequestMethod.GET)
+    @ResponseBody
+    public AjaxResult exceptFunc() {
+        helloService.exceptFunc();
+
+        return AjaxResult.success();
+    }
 }
