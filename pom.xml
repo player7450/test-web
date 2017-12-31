@@ -22,21 +22,43 @@
 
   <profiles>
     <profile>
-      <id>default</id>
+      <id>dev</id>
       <properties>
-        <props>test_dev</props>
+        <env.props>test-dev</env.props>
       </properties>
       <activation>
         <activeByDefault>true</activeByDefault>
       </activation>
     </profile>
+    <profile>
+      <id>product</id>
+      <activation>
+        <property>
+          <name>env</name>
+          <value>product</value>
+        </property>
+      </activation>
+      <properties>
+        <env.props>test-product</env.props>
+      </properties>
+    </profile>
   </profiles>
 
   <build>
     <filters>
-      <filter>../${props}.properties</filter>
+      <filter>../${env.props}.properties</filter>
     </filters>
     <finalName>test-web</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 
   <dependencyManagement>

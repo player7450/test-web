@@ -9,6 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <name>test-web-webapp</name>
     <artifactId>test-web-webapp</artifactId>
     <packaging>war</packaging>
 
