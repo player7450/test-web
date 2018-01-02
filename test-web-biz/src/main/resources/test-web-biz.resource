@@ -1,1 +1,0 @@
-this is test-web-biz's resource
