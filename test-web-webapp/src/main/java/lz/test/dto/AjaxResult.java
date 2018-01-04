@@ -1,4 +1,4 @@
-package lz.test.bean;
+package lz.test.dto;
 
 import lombok.Builder;
 import lombok.Data;
@@ -15,7 +15,7 @@ public class AjaxResult {
     private Object data;
 
     public static AjaxResult success(Object data, String msg) {
-        return new AjaxResultBuilder()
+        return AjaxResult.builder()
                 .success(true)
                 .msg(msg)
                 .data(data)
@@ -31,7 +31,7 @@ public class AjaxResult {
     }
 
     public static AjaxResult fail(String msg) {
-        return new AjaxResultBuilder()
+        return AjaxResult.builder()
                 .success(false)
                 .msg(msg)
                 .build();

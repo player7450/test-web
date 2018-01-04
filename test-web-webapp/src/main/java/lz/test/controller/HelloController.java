@@ -1,7 +1,7 @@
 package lz.test.controller;
 
-import lz.test.bean.AjaxResult;
-import lz.test.bean.Person;
+import lz.test.dto.AjaxResult;
+import lz.test.dto.Person;
 import lz.test.data.PersonMapper;
 import lz.test.service.HelloService;
 import org.slf4j.Logger;
@@ -48,5 +48,12 @@ public class HelloController {
         Integer count = personMapper.countPerson();
 
         return AjaxResult.success("mybatis test. count is " + count);
+    }
+
+    @RequestMapping(value = "/mybatisget.do", method = RequestMethod.GET)
+    public AjaxResult mybatisget(Integer id) {
+        Person p = personMapper.get(id);
+
+        return AjaxResult.success(p);
     }
 }

@@ -1,6 +1,6 @@
 package lz.test.service;
 
-import lz.test.bean.Person;
+import lz.test.dto.Person;
 
 /**
  * Created by liuzheng on 16/4/19.

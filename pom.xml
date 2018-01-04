@@ -11,6 +11,7 @@
   <modules>
     <module>test-web-biz</module>
     <module>test-web-dao</module>
+    <module>test-web-client</module>
     <module>test-web-webapp</module>
   </modules>
 
@@ -21,6 +22,7 @@
     <mysql-connector-java.version>5.1.42</mysql-connector-java.version>
     <slf4j.version>1.7.16</slf4j.version>
     <logback.version>1.1.5</logback.version>
+    <test-web-client.version>1.0-SNAPSHOT</test-web-client.version>
   </properties>
 
   <profiles>
@@ -68,6 +70,22 @@
 
   <dependencyManagement>
     <dependencies>
+      <!-- test-web -->
+      <dependency>
+        <groupId>lz.test</groupId>
+        <artifactId>test-web-client</artifactId>
+        <version>${test-web-client.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>lz.test</groupId>
+        <artifactId>test-web-biz</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>lz.test</groupId>
+        <artifactId>test-web-dao</artifactId>
+          <version>1.0-SNAPSHOT</version>
+      </dependency>
       <!-- spring version -->
       <dependency>
         <groupId>org.springframework</groupId>

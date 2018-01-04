@@ -45,12 +45,14 @@
         <dependency>
             <groupId>lz.test</groupId>
             <artifactId>test-web-biz</artifactId>
-            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>lz.test</groupId>
+            <artifactId>test-web-client</artifactId>
         </dependency>
         <dependency>
             <groupId>lz.test</groupId>
             <artifactId>test-web-dao</artifactId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>

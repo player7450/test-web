@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<!-- mapper.xml 如果和java文件放一起, mybatis 会自动发现 -->
 <mapper namespace="lz.test.data.PersonMapper">
+
+    <sql id="personColumns">${alias}.id,${alias}.name,${alias}.age</sql>
+
+    <resultMap id="Person" type="lz.test.dto.Person">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="age" property="age"/>
+    </resultMap>
+
     <select id="countPerson" resultType="int">
         select count(1) from person
     </select>
+
+    <select id="get" resultMap="Person">
+        select
+        <include refid="personColumns"><property name="alias" value="p"/></include>
+        from person p
+        where `id`=#{id}
+    </select>
+
 </mapper>

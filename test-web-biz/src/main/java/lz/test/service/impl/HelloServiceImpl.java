@@ -1,6 +1,6 @@
 package lz.test.service.impl;
 
-import lz.test.bean.Person;
+import lz.test.dto.Person;
 import lz.test.service.HelloService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
